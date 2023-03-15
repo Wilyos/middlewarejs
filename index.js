@@ -11,7 +11,8 @@ app.use(bodyParser.json())
 
 app.get('/login/:username',(req,res,next)=>{
     if(req.params.username =="pcana"){
-        res.send(`Bienvenido ${req.params.username}`)
+        //res.send(`Bienvenido ${req.params.username}`)
+        res.redirect('/') //redirecciona al endpoint /
         next()
     }
     else{
